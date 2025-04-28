@@ -14,13 +14,14 @@ private:
     string locationName;
     string locationDescription;
     map<string, Location*> exits;
+    void setName(const string &newName);
+    void setDescription(const string &newDesc);
 public:	
     vector<Item*> LocationInventory;
     vector<Monster*> monsters;
 
-    void setName(const string &newName);
+    Location(const string &newName, const string &newDesc);
     string getName() const;
-    void setDescription(const string &newDesc);
     string getDescription() const;
     void addExit(const string &direction, Location* loc);
     string showExits() const;

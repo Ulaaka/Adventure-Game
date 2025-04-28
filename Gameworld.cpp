@@ -23,89 +23,55 @@ void Gameworld::setGameOver(bool state){
 void Gameworld::loadWorld(){
 
     map<int, Location*> locationMap;
-    Location* centralNexus = new Location();
-    centralNexus->setName("The Central Nexus");
-    centralNexus->setDescription("An ancient crossroads where time and space intertwine.");
+    Location* centralNexus = new Location("The Central Nexus", "An ancient crossroads where time and space intertwine.");
     locationMap[19] = centralNexus;
 
-    Location* abercrombyGates = new Location();
-    abercrombyGates->setName("The Great Abercromby Gates");
-    abercrombyGates->setDescription("Massive stone gates carved with arcane runes.");
+    Location* abercrombyGates = new Location("The Great Abercromby Gates", "Massive stone gates carved with arcane runes.");
     locationMap[1] = abercrombyGates;
 
-    Location*  guildhall  = new Location();
-    guildhall->setName("The Guildhall of Scholars");
-    guildhall->setDescription("A grand hall where traders, scribes, and mysterious figures gather.");
+    Location*  guildhall  = new Location("The Guildhall of Scholars", "A grand hall where traders, scribes, and mysterious figures gather.");
     locationMap[2] = guildhall;
 
-    Location* thompsonObservatory = new Location();
-    thompsonObservatory->setName("The Thompson Observatory");
-    thompsonObservatory->setDescription("A domed tower where the stars reveal glimpses of fate.	");
+    Location* thompsonObservatory = new Location("The Thompson Observatory", "A domed tower where the stars reveal glimpses of fate.");
     locationMap[5] = thompsonObservatory;
 
-    Location* scholarAscent = new Location();
-    scholarAscent->setName("The Scholar's Ascent");
-    scholarAscent->setDescription("A winding staircase that tests the mind as much as the body.");
+    Location* scholarAscent = new Location("The Scholar's Ascent", "A winding staircase that tests the mind as much as the body.");
     locationMap[30] = scholarAscent;
 
-    Location* fenwickRift = new Location();
-    fenwickRift->setName("The Fenwick Rift");
-    fenwickRift->setDescription("A tear in reality...");
+    Location* fenwickRift = new Location("The Fenwick Rift", "A tear in reality...");
     locationMap[29] = fenwickRift;
 
-    Location* finalGateway = new Location();
-    finalGateway->setName("The Final Gateway");
-    finalGateway->setDescription("A portal leading to the realm beyond.	");
+    Location* finalGateway = new Location("The Final Gateway", "A portal leading to the realm beyond.");
     locationMap[32] = finalGateway;
 
-    Location* octagonSpire = new Location();
-    octagonSpire->setName("The Octagon Spire");
-    octagonSpire->setDescription("	A mystical tower containing knowledge beyond mortal comprehension");
+    Location* octagonSpire = new Location("The Octagon Spire", "A mystical tower containing knowledge beyond mortal comprehension");
     locationMap[31] = octagonSpire;
 
-    Location* victoriaSpire = new Location();
-    victoriaSpire->setName("The Victoria Spire");
-    victoriaSpire->setDescription("A towering spire with a celestial beacon at its peak.");
+    Location* victoriaSpire = new Location("The Victoria Spire", "A towering spire with a celestial beacon at its peak.");
     locationMap[20] = victoriaSpire;
 
-    Location* chathamArchives = new Location();
-    chathamArchives->setName("The Chatham Archives");
-    chathamArchives->setDescription("Endless rows of scrolls, each documenting powerful relics lost to time.");
+    Location* chathamArchives = new Location("The Chatham Archives", "Endless rows of scrolls, each documenting powerful relics lost to time.");
     locationMap[13] = chathamArchives;
 
-    Location* sidneyVault = new Location();
-    sidneyVault->setName("The Sidney Vault");
-    sidneyVault->setDescription("A labyrinth of books and stone where scholars vanished centuries ago.");
+    Location* sidneyVault = new Location("The Sidney Vault", "A labyrinth of books and stone where scholars vanished centuries ago.");
     locationMap[15] = sidneyVault;
 
-    Location* haroldTemple = new Location();
-    haroldTemple->setName("The Forbidden Harold Temple");
-    haroldTemple->setDescription("Ancient tomes whisper secrets from their dusty shelves.");
+    Location* haroldTemple = new Location("The Forbidden Harold Temple", "Ancient tomes whisper secrets from their dusty shelves.");
     locationMap[3] = haroldTemple;
 
-    Location* holtEnclave = new Location();
-    holtEnclave->setName("The Holt Enclave");
-    holtEnclave->setDescription("A ruined amphitheater where echoes of past lectures still resonate.");
+    Location* holtEnclave = new Location("The Holt Enclave", "A ruined amphitheater where echoes of past lectures still resonate.");
     locationMap[6] = holtEnclave;
 
-    Location* mountfordKeep = new Location();
-    mountfordKeep->setName("The Mountford Keep");
-    mountfordKeep->setDescription("A towering fortress where ancient warriors once trained.");
+    Location* mountfordKeep = new Location("The Mountford Keep", "A towering fortress where ancient warriors once trained.");
     locationMap[14] = mountfordKeep;
 
-    Location* rendallArena = new Location();
-    rendallArena->setName("The Rendall Arena");
-    rendallArena->setDescription("The echoes of battle cries ring through the ruined walls.");
+    Location* rendallArena = new Location("The Rendall Arena", "The echoes of battle cries ring through the ruined walls.");
     locationMap[9] = rendallArena;
 
-    Location* reillyBattlegrounds = new Location();
-    reillyBattlegrounds->setName("The Reilly Battlegrounds	");
-    reillyBattlegrounds->setDescription("A coliseum of stone and steel, where warriors train and champions rise.");
+    Location* reillyBattlegrounds = new Location("The Reilly Battlegrounds", "A coliseum of stone and steel, where warriors train and champions rise.");
     locationMap[7] = reillyBattlegrounds;
 
-    Location* guildedForge = new Location();
-    guildedForge->setName("The Guilded Forge");
-    guildedForge->setDescription("A legendary forge where artifacts of immense power were once crafted.");
+    Location* guildedForge = new Location("The Guilded Forge", "A legendary forge where artifacts of immense power were once crafted.");
     locationMap[26] = guildedForge;
 
     centralNexus -> addExit("WEST",locationMap[1]);
@@ -161,7 +127,6 @@ void Gameworld::loadWorld(){
 
 // Raider setting
     Potion* redPotion = new Potion("Red Healing Potion", 40);
-
     Treasure* diamond = new Treasure("Diamond", 100);
 
     Monster* raider = new Monster(10, 10, "The final blow before falling.", "Raider", 3, 30, 5, "A swift and ruthless attacker.");
@@ -171,7 +136,6 @@ void Gameworld::loadWorld(){
 
 // Warrior setting
     Treasure* scroll = new Treasure("Ancient Scroll", 30);
-
     Treasure* Crown = new Treasure("Gold Crown", 150);
 
     Monster* warrior = new Monster(12, 9, "Dies honourably in battle.", "Warrior", 4, 40, 8, "A stalwart defender of ancient traditions.");
@@ -195,7 +159,6 @@ void Gameworld::loadWorld(){
 
 // Bandit setting
     Treasure* silverKey = new Treasure("Silver Key", 20);
-
     Weapon* ironSword = new Weapon("Iron Sword", 12);
 
     Monster* bandit = new Monster(10, 8, "A cunning thief with a taste for blood.", "Bandit", 4, 45, 7, "Slumps quietly after a fatal misstep.");
@@ -220,9 +183,7 @@ void Gameworld::loadWorld(){
 
 // Sprite setting
     Treasure* goldCoin = new Treasure("Gold Coin", 50);
-
     Treasure* Gemstone = new Treasure("Gemstone", 75);
-
     Potion* blueHealingPotion = new Potion("Blue Healing Potion", 50);
 
     Monster* sprite = new Monster(10, 16, "A mischievous and elusive fae creature.", "Sprite", 1, 25, 3, "Disappears with a final burst of light.");
@@ -232,6 +193,7 @@ void Gameworld::loadWorld(){
     locationMap[9] -> addMonster(sprite);
 
     Item* theRing = new  Item("The great Eldritch Ring.");
+
     Boss* theBoss = new Boss(40, 100, "Farewell, brother.", "The boss", 12, 60, 15, "The great Mongolian warrior", theRing);
     locationMap[20] -> addMonster(theBoss);
 
@@ -256,7 +218,6 @@ void Gameworld::loadWorld(){
 
     Potion* ultimateHealing = new Potion("Ultimate Healing", 200);
     locationMap[32]->addItem(ultimateHealing);
-
 
     Weapon* rustySword = new Weapon("Rusty Sword", 5);
     locationMap[19]->addItem(rustySword);
