@@ -17,26 +17,28 @@ protected:
     int hitpoints;
     Location* currentLocation;
     vector<Item*> inventory; 
+    void setName(const string &newName);
+    void setSkill(int sk);
+    void setHitpoints(int hp);
+    void setArmour(int ar);
+    void setDescription(const string &newDescription);
+
 public:
     virtual ~Character() = default;
 
+    Character(const string &newName, int sk, int hp, int ar, const string &newDescription);
     int getArmourProtection();
     void addItem(Item* item);
     void removeItem(Item* item);
     void dropItem(Item* item);
     Location* getLocation() const;
     bool moveTo(Location* newLocation);
-    void setSkill(int sk);
     int getSkill() const ;
-    void setHitpoints(int hp);
     int getHitpoints() const;
-    void setName(const string &newName);
     string getName() const;
-    void setArmour(int ar);
     int getArmour() const;
     void takeHit(int hit);
     string getInventory();
-    void setDescription(const string &newDescription);
     string getDescription() const;
     int rollDice();
     vector<Item*> accessInventory();

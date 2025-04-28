@@ -160,251 +160,123 @@ void Gameworld::loadWorld(){
     guildedForge -> addExit("WEST",locationMap[6]);
 
 // Raider setting
-    Potion* redPotion = new Potion();
-    redPotion -> setStrength(40);
-    redPotion -> setName("Red Healing Potion");
+    Potion* redPotion = new Potion("Red Healing Potion", 40);
 
-    Treasure* diamond = new Treasure();
-    diamond -> setValue(100);
-    diamond -> setName("Diamond");
+    Treasure* diamond = new Treasure("Diamond", 100);
 
-    Monster* raider = new Monster();
-    raider -> setName("Raider");
-    raider -> setSkill(3);
-    raider -> setHitpoints(30);
-    raider -> setPower(10);
-    raider -> setArmour(5);
-    raider -> setSwansong("The final blow before falling.");
-    raider -> setDescription("A swift and ruthless attacker.");
-    raider->setBounty(10);
+    Monster* raider = new Monster(10, 10, "The final blow before falling.", "Raider", 3, 30, 5, "A swift and ruthless attacker.");
     raider -> addItem(redPotion);
     raider -> addItem(diamond);
     locationMap[6] -> addMonster(raider);
 
 // Warrior setting
-    Treasure* scroll = new Treasure();
-    scroll -> setValue(30);
-    scroll -> setName("Ancient Scroll");
+    Treasure* scroll = new Treasure("Ancient Scroll", 30);
 
-    Treasure* Crown = new Treasure();
-    Crown -> setValue(150);
-    Crown -> setName("Gold Crown");
+    Treasure* Crown = new Treasure("Gold Crown", 150);
 
-    Monster* warrior = new Monster();
-    warrior -> setName("Warrior");
-    warrior -> setSkill(4);
-    warrior -> setHitpoints(40);
-    warrior -> setPower(12);
-    warrior -> setArmour(8);
-    warrior -> setSwansong("Dies honourably in battle.");
-    warrior -> setDescription("A stalwart defender of ancient traditions.");
-    warrior->setBounty(9);
+    Monster* warrior = new Monster(12, 9, "Dies honourably in battle.", "Warrior", 4, 40, 8, "A stalwart defender of ancient traditions.");
     warrior -> addItem(scroll);
     warrior -> addItem(Crown);
     locationMap[5] -> addMonster(warrior);
 
 // Brute setting
-    Armour* LeatherArmour = new Armour();
-    LeatherArmour->setArmour(5);
-    LeatherArmour->setName("Leather Armour");
+    Armour* LeatherArmour = new Armour("Leather Armour", 5);
 
-    Monster* brute = new Monster();
-    brute -> setName("Brute");
-    brute -> setSkill(2);
-    brute -> setHitpoints(29);
-    brute -> setPower(15);
-    brute -> setArmour(10);
-    brute -> setSwansong("Falls with a deafening roar.");
-    brute -> setDescription("A formidable opponent with crushing strength.");
-    brute->setBounty(12);
+    Monster* brute = new Monster(15, 12, "Falls with a deafening roar.", "Brute", 2, 29, 10, "A formidable opponent with crushing strength.");
     brute -> addItem(LeatherArmour);
     locationMap[29] -> addMonster(brute);
 
 // Troll setting
-    Weapon* greatAxe = new Weapon();
-    greatAxe->setPower(15);
-    greatAxe->setName("Great Axe");
+    Weapon* greatAxe = new Weapon("Great Axe", 15);
 
-    Monster* troll = new Monster();
-    troll -> setName("Troll");
-    troll -> setSkill(2);
-    troll -> setHitpoints(60);
-    troll -> setPower(18);
-    troll -> setArmour(12);
-    troll -> setSwansong("Its final roar shakes the earth.");
-    troll -> setDescription("An ancient creature lurking beneath the shadows.");
-    troll->setBounty(11);
+    Monster* troll = new Monster(18, 11, "Its final roar shakes the earth.", "Troll", 2, 60, 12, "An ancient creature lurking beneath the shadows.");
     troll -> addItem(greatAxe);
     locationMap[29] -> addMonster(troll);
 
 // Bandit setting
-    Treasure* silverKey = new Treasure();
-    silverKey->setValue(20);
-    silverKey->setName("Silver Key");
+    Treasure* silverKey = new Treasure("Silver Key", 20);
 
-    Weapon* ironSword = new Weapon();
-    ironSword->setPower(12);
-    ironSword->setName("Iron Sword");
+    Weapon* ironSword = new Weapon("Iron Sword", 12);
 
-    Monster* bandit = new Monster();
-    bandit -> setName("Bandit");
-    bandit -> setSkill(4);
-    bandit -> setHitpoints(45);
-    bandit -> setPower(10);
-    bandit -> setArmour(7);
-    bandit -> setSwansong("A cunning thief with a taste for blood.");
-    bandit -> setDescription("Slumps quietly after a fatal misstep.");
-    bandit->setBounty(8);
+    Monster* bandit = new Monster(10, 8, "A cunning thief with a taste for blood.", "Bandit", 4, 45, 7, "Slumps quietly after a fatal misstep.");
     bandit -> addItem(silverKey);
     bandit -> addItem(ironSword);
     locationMap[2] -> addMonster(bandit);
 
 // Wraith setting
-    Treasure* mysticAmulet = new Treasure();
-    mysticAmulet->setValue(40);
-    mysticAmulet->setName("Mystic Amulet");
+    Treasure* mysticAmulet = new Treasure("Mystic Amulet", 40);
 
-    Monster* wraith = new Monster();
-    wraith -> setName("Wraith");
-    wraith -> setSkill(2);
-    wraith -> setHitpoints(35);
-    wraith -> setPower(8);
-    wraith -> setArmour(4);
-    wraith -> setSwansong("An ethereal entity from beyond the grave.");
-    wraith -> setDescription("Fades into the mist with a haunting whisper.");
-    wraith->setBounty(15);
+    Monster* wraith = new Monster(8, 15, "An ethereal entity from beyond the grave.", "Wraith", 2, 35, 4, "Fades into the mist with a haunting whisper.");
     wraith -> addItem(mysticAmulet);
     locationMap[30] -> addMonster(wraith);
 
 // Knight setting
-    Armour* plateArmour = new Armour();
-    plateArmour->setArmour(20);
-    plateArmour->setName("Plate Armour");
+    Armour* plateArmour = new Armour("Plate Armour", 20);
 
-    Monster* knight = new Monster();
-    knight -> setName("Knight");
-    knight -> setSkill(5);
-    knight -> setHitpoints(50);
-    knight -> setPower(18);
-    knight -> setArmour(12);
-    knight -> setSwansong("A noble warrior sworn to protect his honour.");
-    knight -> setDescription("Falls with dignity in his final charge.");
-    knight->setBounty(10);
+    Monster* knight = new Monster(18, 10, "A noble warrior sworn to protect his honour.", "Knight", 5, 50, 12, "Falls with dignity in his final charge.");
     knight -> addItem(greatAxe);
     knight -> addItem(plateArmour);
     locationMap[31] -> addMonster(knight);
 
 // Sprite setting
-    Treasure* goldCoin = new Treasure();
-    goldCoin->setValue(50);
-    goldCoin->setName("Gold Coin");
+    Treasure* goldCoin = new Treasure("Gold Coin", 50);
 
-    Treasure* Gemstone = new Treasure();
-    Gemstone->setValue(75);
-    Gemstone->setName("Gemstone");
+    Treasure* Gemstone = new Treasure("Gemstone", 75);
 
-    Potion* blueHealingPotion = new Potion();
-    blueHealingPotion->setStrength(50);
-    blueHealingPotion->setName("Blue Healing Potion");
+    Potion* blueHealingPotion = new Potion("Blue Healing Potion", 50);
 
-    Monster* sprite = new Monster();
-    sprite -> setName("Sprite");
-    sprite -> setSkill(1);
-    sprite -> setHitpoints(25);
-    sprite -> setPower(10);
-    sprite -> setArmour(3);
-    sprite -> setSwansong("A mischievous and elusive fae creature.");
-    sprite -> setDescription("Disappears with a final burst of light.");
-    sprite->setBounty(16);
+    Monster* sprite = new Monster(10, 16, "A mischievous and elusive fae creature.", "Sprite", 1, 25, 3, "Disappears with a final burst of light.");
     sprite -> addItem(goldCoin);
     sprite -> addItem(Gemstone);
     sprite -> addItem(blueHealingPotion);
     locationMap[9] -> addMonster(sprite);
 
-    Item* theRing = new  Item();
-    theRing->setName("The great Eldritch Ring.");
-
-    Boss* theBoss = new Boss();
-    theBoss -> setName("The final boss");
-    theBoss -> setSkill(12);
-    theBoss -> setHitpoints(60);
-    theBoss -> setPower(40);
-    theBoss -> setArmour(15);
-    theBoss -> setSwansong("Farewell, brother.");
-    theBoss -> setDescription("The great Mongolian warrior");
-    theBoss->setBounty(100);
-    theBoss -> addItem(theRing);
+    Item* theRing = new  Item("The great Eldritch Ring.");
+    Boss* theBoss = new Boss(40, 100, "Farewell, brother.", "The boss", 12, 60, 15, "The great Mongolian warrior", theRing);
     locationMap[20] -> addMonster(theBoss);
 
 // adding items to the location:
-    Treasure* silverCoin = new Treasure();
-    silverCoin -> setValue(25);
-    silverCoin -> setName("Silver Coin");
+    Treasure* silverCoin = new Treasure("Silver Coin", 25);
     locationMap[1] -> addItem(silverCoin);
 
-    Treasure* sholarMedallion = new Treasure();
-    sholarMedallion->setValue(50);
-    sholarMedallion->setName("Scholar's Medallion");
+    Treasure* sholarMedallion = new Treasure("Scholar's Medallion", 50);
     locationMap[2]->addItem(sholarMedallion);
 
-    Treasure* rubyGemstone = new Treasure();
-    rubyGemstone->setValue(70);
-    rubyGemstone->setName("Ruby Gemstone");
+    Treasure* rubyGemstone = new Treasure("Ruby Gemstone", 70);
     locationMap[15]->addItem(rubyGemstone);
 
-    Treasure* celestialOrb = new Treasure();
-    celestialOrb->setValue(150);
-    celestialOrb->setName("Celestial Orb");
+    Treasure* celestialOrb = new Treasure("Celestial Orb", 150);
     locationMap[31]->addItem(celestialOrb);
 
-    Armour* steelShield = new Armour();
-    steelShield->setArmour(10);
-    steelShield->setName("Steel Shield");
+    Armour* steelShield = new Armour("Steel Shield", 10);
     locationMap[14]->addItem(steelShield);
 
-    Potion* greanHealingPotion = new Potion();
-    greanHealingPotion->setStrength(30);
-    greanHealingPotion->setName("Green Healing Potion");
+    Potion* greanHealingPotion = new Potion("Green Healing Potion", 30);
     locationMap[19]->addItem(greanHealingPotion);
 
-    Potion* ultimateHealing = new Potion();
-    ultimateHealing->setStrength(200);
-    ultimateHealing->setName("Ultimate Healing");
+    Potion* ultimateHealing = new Potion("Ultimate Healing", 200);
     locationMap[32]->addItem(ultimateHealing);
 
-    Weapon* rustySword = new Weapon();
-    rustySword->setPower(5);
-    rustySword->setName("Rusty Sword");
+
+    Weapon* rustySword = new Weapon("Rusty Sword", 5);
     locationMap[19]->addItem(rustySword);
 
-    Weapon* dagger = new Weapon();
-    dagger->setPower(8);
-    dagger->setName("Ceremonial Dagger");
+    Weapon* dagger = new Weapon("Ceremonial Dagger", 8);
     locationMap[3]->addItem(dagger);
 
-    Weapon* sword = new Weapon();
-    sword->setPower(12);
-    sword->setName("Knight's Sword");
+    Weapon* sword = new Weapon("Knight's Sword", 12);
     locationMap[14]->addItem(sword);
 
-    Weapon* spear = new Weapon();
-    spear->setPower(10);
-    spear->setName("Gladiator's Spear");
+    Weapon* spear = new Weapon("Gladiator's Spear", 10);
     locationMap[9]->addItem(spear);
 
-    Weapon* axe = new Weapon();
-    axe->setPower(14);
-    axe->setName("Battle Axe");
+    Weapon* axe = new Weapon("Battle Axe", 14);
     locationMap[7]->addItem(axe);
 
-    Weapon* hammer = new Weapon();
-    hammer->setPower(18);
-    hammer->setName("Master's Hammer");
+    Weapon* hammer = new Weapon("Master's Hammer", 18);
     locationMap[26]->addItem(hammer);
 
-    Weapon* staff = new Weapon();
-    staff->setPower(15);
-    staff->setName("Enchanted Staff");
+    Weapon* staff = new Weapon("Enchanted Staff", 15);
     locationMap[31]->addItem(staff);
 
     firstLocation = locationMap[19];

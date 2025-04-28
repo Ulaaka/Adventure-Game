@@ -7,10 +7,11 @@ using namespace std;
 class Item {
 private:
     string name;
-
-public:
-    virtual ~Item(void) = default;
     void setName(const std::string &newName);
+public:
+
+    virtual ~Item(void) = default;
+    Item(const std::string &newName);
     string getName() const;
 };
 

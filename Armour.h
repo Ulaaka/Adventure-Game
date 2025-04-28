@@ -8,9 +8,9 @@ using namespace std;
 class Armour : public Item{
 private:
 int armourProtection;
-
+void setArmour(int ar);
 public:
-    void setArmour(int ar);
+    Armour(const std::string &newName, int ar);
     int getArmour() const;
 };
 #endif

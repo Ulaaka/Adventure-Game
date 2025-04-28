@@ -8,9 +8,9 @@ using namespace std;
 class Treasure : public Item{
 private:
 int treasureValue;
-
+void setValue(int val);
 public:
-    void setValue(int val);
+    Treasure(const std::string &newName, int val);
     int getValue() const;
 };
 #endif

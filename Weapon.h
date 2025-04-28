@@ -12,6 +12,6 @@ void setPower(int ap);
 
 public:
     int getPower() const;
-    Weapon(int ap);
+    Weapon(const std::string &newName, int ap);
 };
 #endif
