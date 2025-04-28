@@ -8,10 +8,10 @@ using namespace std;
 class Boss : public Monster{
 private:
     Item* eldritchRing;
-
+    void setEldritchRing(Item* itemToSet);
 public:
     Item* getEldritchRing();
-    Item* setEldritchRing(Item* itemToSet);
+    Boss(int pw, int bounty, const std::string &newSwansong, const string &newName, int sk, int hp, int ar, const string &newDescription, Item* itemToSet);
 
 };
 

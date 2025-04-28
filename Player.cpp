@@ -8,6 +8,11 @@
 #include <iostream>
 using namespace std;
 
+Player::Player(const string &newName, int sk, int hp, int ar, const string &newDescription, int s, Location* loc):Character(newName, sk, hp, ar, newDescription){
+    setScore(s);
+    setLocation(loc);
+};
+
 void Player::setScore(int s){
     playerScore = s;
 };

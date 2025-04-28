@@ -8,9 +8,10 @@ using namespace std;
 class Potion : public Item{
 private:
 int healingStrenght;
+void setStrength(int hp);
 
 public:
-    void setStrength(int hp);
+    Potion(const std::string &newName, int hp);
     int getStrength() const;
 };
 #endif

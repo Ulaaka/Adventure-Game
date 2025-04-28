@@ -12,11 +12,12 @@ class Player : public Character{
 private:
 int playerScore;
 Location* playerLocation;
+void setScore(int s);
+void setLocation(Location* loc);
 
 public:
-    void setScore(int s);
+    Player(const string &newName, int sk, int hp, int ar, const string &newDescription, int s, Location* loc);
     int getScore() const;
-    void setLocation(Location* loc);
     Location* getLocation() const;
     void collectItems(Location* loc);
     bool moveTo(const std::string &direction);

@@ -5,6 +5,11 @@
 using namespace std;
 
 
+Location::Location(const string &newName, const string &newDesc){
+    setName(newName);
+    setDescription(newDesc);
+};
+
 void Location::setName(const string &newName){
     locationName = newName;
 };

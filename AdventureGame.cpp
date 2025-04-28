@@ -15,15 +15,8 @@ int main() {
     Gameworld gameworld;
     gameworld.loadWorld();
     string input;
-    Player* player = new Player();
-
-    player->setSkill(6);
-    player->setArmour(0);
-    player->setHitpoints(50);
-    player->setName("Nyamaa");
-    player-> setLocation(gameworld.getStartingLocation());
-    player->setScore(0);
-
+    Player* player = new Player("Nyamaa", 6, 50, 0, "", 0, gameworld.getStartingLocation());
+    
     while (!gameworld.isGameOver()){
         Location* currentLocation = player->getLocation();
         cout << "Current location: " << currentLocation->getName() << endl;

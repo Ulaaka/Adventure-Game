@@ -8,6 +8,15 @@ using namespace std;
 #include "Armour.h"
 #include "Location.h"
 
+
+Character::Character(const string &newName, int sk, int hp, int ar, const string &newDescription){
+    setName(newName);
+    setSkill(sk);
+    setHitpoints(hp);
+    setArmour(ar);
+    setDescription(newDescription);
+};
+
 int Character::getArmourProtection(){
     int total = 0;
     for (auto idk = inventory.begin(); idk != inventory.end(); ) {
